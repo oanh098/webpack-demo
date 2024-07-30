@@ -1,0 +1,67 @@
+// Import Bootstrap Utils so that we can amend them
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/utilities';
+
+$utilities: map-merge(
+    $utilities,
+    (
+        "z-index": (
+            property: z-index,
+            class: z, // ex: z-1
+            values: $zindex-levels
+        ),
+        
+        "position": (
+            property: position,
+            values: static relative absolute fixed sticky
+        ),    
+        
+
+        "background-color": map-merge(
+        map-get($utilities, "background-color"),
+            (
+                state: hover,
+                responsive: true,
+                
+            )
+        ),
+
+        "bg-opacity": (
+            css-var: true,
+            class: bg-opacity,
+            values: (
+                10: .1,
+                25: .25,
+                50: .5,
+                75: .75,
+                100: 1
+            )
+        ),
+
+        "text-color": (
+        property: color,
+        class: text,
+        values: $custom-text-colors
+        ),
+
+        "width": (
+            property: width,
+            class: w,
+            values: (
+                25: 25%,
+                40: 40%,
+                50: 50%,
+                75: 75%,
+                100: 100%,
+                auto: auto
+            )
+        ),
+
+       
+
+    )
+);
+    
+
+@import "bootstrap/scss/utilities/api";

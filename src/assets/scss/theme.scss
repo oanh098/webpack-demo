@@ -1,0 +1,61 @@
+/* Custom
+ Option B: Include parts of Bootstrap
+*/
+/* 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import 'bootstrap/scss/functions';
+
+/* Bootstrap Mixins - DO NOT CHANGE ANYTHING IN HERE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import 'bootstrap/scss/mixins';
+
+/* 2. Include any default variable overrides here
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*  @import "bootstrap/scss/variables-dark";
+*/
+
+@import 'abstracts/sass-variables';
+
+
+/* 4. Include any default map overrides here
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* 5. Include remainder of required parts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* @import "bootstrap/scss/maps";
+*/
+/* @import "bootstrap/scss/root";
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Framework Mixins
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import 'abstracts/mixins';
+
+/* Framework Utilities - Needs to be imported before main bootstrap file.*/
+@import 'utilities/utilities';
+
+/* 6. Bootstrap Core - DO NOT CHANGE ANYTHING IN HERE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import 'bootstrap/scss/bootstrap';
+
+/* Framework Custom Properties (CSS Variables)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import 'abstracts/css-vars';
+
+
+
+/* Framework Base 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import 'base';
+
+/* 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* @import "bootstrap/scss/utilities/api";
+*/
+/* 8. Add additional custom code here
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Framework Components */
+@import 'components/components';
+@import 'vendors/vendors';
+@import 'styles.scss';
